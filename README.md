@@ -14,36 +14,35 @@ This Splunk app is compatible with the [Splunk Common Information Model (CIM)](h
 
 ```json
 {
-      "type": "splunk",
-      "meta": {
-        "collector_token": "<splunk_hec_token>",
-        "collector_url": "https://http-inputs-<host>.splunkcloud.com/services/collector/event",
-        "enable_batch": true,
-        "obfuscate_api_keys": true,
-        "obfuscate_api_keys_length": 10,
-        "fields": [
-          "method",
-          "path",
-          "raw_path",
-          "user_agent",
-          "response_code",
-          "api_key",
-          "api_name",
-          "api_id",
-          "request_time",
-          "ip_address",
-          "tags",
-          "alias"
-        ],
-        "ignore_tag_prefix_list": [
-          "key-",
-          "org-",
-          "api-",
-          "original-path-",
-        ]
-      }
-    }
+  "type": "splunk",
+  "meta": {
+    "collector_token": "<splunk_hec_token>",
+    "collector_url": "https://http-inputs-<host>.splunkcloud.com/services/collector/event",
+    "enable_batch": true,
+    "obfuscate_api_keys": true,
+    "obfuscate_api_keys_length": 10,
+    "fields": [
+        "method",
+        "path",
+        "raw_path",
+        "user_agent",
+        "response_code",
+        "api_key",
+        "api_name",
+        "api_id",
+        "request_time",
+        "ip_address",
+        "tags",
+        "alias"
+    ],
+    "ignore_tag_prefix_list": [
+        "key-",
+        "org-",
+        "api-",
+        "original-path-",
+    ]
   }
+}
 ```
 
 ## Releasing
